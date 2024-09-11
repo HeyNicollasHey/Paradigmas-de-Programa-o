@@ -4,7 +4,6 @@ def encontrar_digitos(linha):
     n = len(linha)
 
     while i < n:
-        # Verifica cada palavra por extenso e adiciona o dígito correspondente à lista
         if linha[i:i+3] == "one":
             numeros_encontrados.append("1")
             i += 3
@@ -35,25 +34,19 @@ def encontrar_digitos(linha):
         elif linha[i:i+4] == "zero":
             numeros_encontrados.append("0")
             i += 4
-        # Verifica se o caractere atual é um dígito e adiciona à lista
         elif linha[i].isdigit():
             numeros_encontrados.append(linha[i])
             i += 1
         else:
             i += 1
 
-    # Verifica se há pelo menos um número encontrado
     if len(numeros_encontrados) >= 2:
-        # Combina o primeiro e o último dígito encontrados
         return int(numeros_encontrados[0] + numeros_encontrados[-1])
     elif len(numeros_encontrados) == 1:
-        # Se houver apenas um número, combina-o com "0"
         return int(numeros_encontrados[0] + "0")
     else:
-        # Se não houver números, retorna 0
         return 0
 
-# Exemplo de uso com a lista de strings
 calibration_data = [
   'ckmb52fldxkseven3fkjgcbzmnr7',
   'gckhqpb6twoqnjxqplthree2fourkspnsnzxlz1',
@@ -1057,7 +1050,6 @@ calibration_data = [
   '3nine6five1',
   ];
 
-# Somando os valores de calibração
 valor_total = sum(encontrar_digitos(line) for line in calibration_data)
 
 print(f"A soma de todos os valores de calibração é: {valor_total}")
