@@ -45,7 +45,7 @@ class Carrinho:
 
         if produto_encontrado:
             produto_encontrado.valor -= desconto
-            produto_encontrado.desconto += desconto  # Atualiza o valor do desconto aplicado
+            produto_encontrado.desconto += desconto
             print(f"Desconto de {desconto} aplicado ao produto de código: {produto_codigo}. Valor atual: {produto_encontrado.valor}")
         else:
             print(f"Produto de código: {produto_codigo} não encontrado no carrinho.")

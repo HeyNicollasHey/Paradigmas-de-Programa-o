@@ -2,7 +2,7 @@ from models.Carrinho import Carrinho
 from models.Produtos import produtosDisponiveis
 
 def Menu():
-    carrinho = Carrinho()  # Inicializa o carrinho uma vez
+    carrinho = Carrinho()
     while True:
         print("1 - Inserir item ao carrinho\n2 - Acréscimo de item\n3 - Desconto de item\n4 - Acréscimo total\n5 - Desconto total\n6 - Finalizar venda")
         digito = input("Digite uma opcao: ")
@@ -14,17 +14,17 @@ def Menu():
             for item in carrinho.itens:
                 print(item)
 
-        elif digito == "2":  # Acréscimo de item específico
+        elif digito == "2":
             codigo = int(input("Digite o código do produto para acréscimo: "))
             acrescimo = float(input("Digite o valor do acréscimo: "))
             carrinho.acrescimoProdutoEspecifico(codigo, acrescimo)
 
-        elif digito == "3":  # Desconto de item específico
+        elif digito == "3":
             codigo = int(input("Digite o código do produto para desconto: "))
             desconto = float(input("Digite o valor do desconto: "))
             carrinho.descontoProdutoEspecifico(codigo, desconto)
 
-        elif digito == "4":  # Acréscimo total
+        elif digito == "4":
             acrescimoTotal = float(input("Digite o valor total de acréscimo a ser distribuído: "))
             carrinho.acrescimoProdutos(acrescimoTotal)
 
@@ -32,11 +32,11 @@ def Menu():
             descontoTotal = float(input("Digite o valor total de desconto a ser distribuído: "))
             carrinho.descontoProdutos(descontoTotal)
 
-        elif digito == "6":  # Finalizar venda
+        elif digito == "6":
             print("Venda finalizada.")
             valor_total = carrinho.calcular_valor_total()
             print(f"Valor total da compra: {valor_total}")
-            break  # Sai do loop e finaliza a função
+            break
 
         else:
             print("Opção inválida. Tente novamente.")
