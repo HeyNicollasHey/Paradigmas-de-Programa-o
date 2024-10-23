@@ -18,7 +18,7 @@ public class UranoIntegra implements IBalanca<Produto> {
             throw new ArquivoNaoEncontradoException("O diretório especificado não existe: " + pastaArquivoTxt);
         }
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(pastaArquivoTxt + "/PRODUTOS.TXT"))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(pastaArquivoTxt))) {
 
             for (Produto produto : produtos) {
                 String linha = formatarProduto(produto);

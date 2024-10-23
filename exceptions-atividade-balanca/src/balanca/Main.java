@@ -34,8 +34,8 @@ public class Main {
         //balancaFilizola.exportar(produtos, "src/balanca/teste.txt");
 
 
-        IBalanca balancaToledo = BalancaFactory.getBalanca(TipoBalanca.TOLEDO_MGV6);
-        balancaToledo.exportar(produtos, "src/balanca/teste.txt");
+        //IBalanca balancaToledo = BalancaFactory.getBalanca(TipoBalanca.TOLEDO_MGV6);
+        //balancaToledo.exportar(produtos, "src/balanca/teste.txt");
 
         //IBalanca balancaUrano = BalancaFactory.getBalanca(TipoBalanca.URANO_INTEGRA);
         //balancaUrano.exportar(produtos, "src/balanca/teste.txt");
